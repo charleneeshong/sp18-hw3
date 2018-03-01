@@ -1,15 +1,19 @@
 <%= form_tag teachers_path do %>
   <%= label_tag(:full_name, "Full name") %>
   <%= text_field_tag(:full_name) %>
+  <p>
 
   <%= label_tag(:course_name, "Course name") %>
   <%= text_field_tag(:course_name, nil, placeholder: @placeholder_course) %>
+  <p>
 
   <%= label_tag(:grade_level, "Grade level") %>
   <%= text_field_tag(:grade_level) %>
+  <p>
 
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-
+  <p>
+    
   <%= submit_tag("Create teacher") %>
 <% end %>
 

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyText
+  course_name: MyText
+  grade_level: MyText
+
+two:
+  full_name: MyText
+  course_name: MyText
+  grade_level: MyText

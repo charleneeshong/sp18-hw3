@@ -1,7 +1,9 @@
-class TeachersController < ApplicationController
+class StudentsController < ApplicationController
   def new
-    @teacher = Teacher.new
-    @placeholder_course = '186'
+    @student = Student.new
+    @placeholder_fname = 'Tap Sum'
+    @placeholder_lname = 'Bong'
+    @placeholder_wyr = 'Go Bears!'
   end
 
   def create
@@ -9,8 +11,8 @@ class TeachersController < ApplicationController
 
     # YOUR CODE HERE
     # render plain: params[:teacher].inspect
-    @teacher = Teacher.new(teacher_params)
-    @teacher.save
+    @student = Student.new(student_params)
+    @student.save
 
     # This line is explicitly declaring that this controller method should render/serve the
     # 'views/teachers/show.html.erb' view. Otherwise, the controller would try to look for a 
@@ -21,11 +23,11 @@ class TeachersController < ApplicationController
   end
 
   def show
-    @teacher = Teacher.find(params[:id])
+    @student = Student.find(params[:id])
   end
 
   private
-    def teacher_params
-      params.permit(:full_name, :course_name, :grade_level)
+    def student_params
+      params.permit(:first_name, :last_name, :wyr)
     end
 end
